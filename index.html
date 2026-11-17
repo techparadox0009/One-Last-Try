@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>For Nabiha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SOFT MUSIC (put your file next to index.html as music.mp3) -->
+  <audio id="bgm" autoplay loop preload="auto">
+    <source src="love-audio.mpeg" type="audio/mpeg">
+  </audio>
+  <!-- <button class="music" id="music" aria-label="Play or pause music" aria-pressed="false">&#9834;</button> -->
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="opening">I want you to read this just one last time. This is my final effort, so please read it with all your heart, just once more.</p>
+    <p class="hero-small">Nabiha,</p>
+    <h1>Please read this slowly.</h1>
+    <p class="hero-sub">Not as an argument. Just as me, talking to you.</p>
+    <div class="counter" aria-live="polite">
+      <span id="days">0</span>
+      <small>days since 10 April 2021, and I would choose every one of them again</small>
+    </div>
+  </header>
+
+  <!-- WHAT I SAID -->
+  <section class="block">
+    <h2>About what I said</h2>
+    <p>I told you, "If you increase visibility, people will propose you." I understand how that landed. It sounded like I doubted you, and that hurt you.</p>
+    <p>I didn't mean it as blame, and I don't doubt your loyalty. I trust you. I chose my words badly, and I'm sorry they made you feel small.</p>
+    <p>One wrong sentence shouldn't outweigh years of honesty between us. You know who I am when it counts, and this was not me.</p>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="block">
+    <h2>Our story</h2>
+    <ol class="timeline">
+      <li><time>10 April 2021</time><p>Where it all started.</p></li>
+      <li><time>13 June 2022</time><p>We met. You came to my home.</p></li>
+      <li><time>12 January 2023</time><p>I visited your home.</p></li>
+      <li><time>14 January 2023</time><p>Our first kiss.</p></li>
+      <li><time>14 May 2024</time><p>I visited your home again.</p></li>
+      <li><time>18 April 2025</time><p>Our engagement.</p></li>
+      <li><time>2 March 2026</time><p>Our first Eid gifts exchange.</p></li>
+      <li class="now"><time>Today</time><p>Still choosing you.</p></li>
+    </ol>
+  </section>
+
+  <!-- FIRST HAND HOLD -->
+  <section class="block first-hand">
+    <h2>The first time I held your hand</h2>
+    <figure class="feature">
+      <img src="first-hand.jpeg" alt="The first time Ahad held Nabiha's hand">
+      <figcaption>17th June 2022 | Ahad's Study Room</figcaption>
+    </figure>
+    <p class="feature-note">I still remember this moment. Nothing about how I feel has changed since.</p>
+  </section>
+
+  <!-- FIRST GIFT -->
+  <section class="block first-hand">
+    <h2>Our first gift</h2>
+    <figure class="feature">
+      <img src="our-first-gift.jpeg" alt="Our first gift">
+      <figcaption>15th June 2022 | Ahad's Study Room</figcaption>
+    </figure>
+    <p class="feature-note">It was our first gift, and I still have it with me today. Some things I will never let go of.</p>
+  </section>
+
+  <!-- PHOTOS OF US -->
+  <section class="block">
+    <h2>Our chats</h2>
+    <p class="remind">I am just reminding you this about our love, so that you can have some refreshment.</p>
+    <div class="photo-grid">
+      <figure class="tall"><img src="chat-1.jpeg" alt="Ahad and Nabiha"><figcaption>Your First Birthday Wish By Me</figcaption></figure>
+      <figure class="tall"><img src="chat-2.jpeg" alt="Ahad and Nabiha"><figcaption>First Time we accept our Love</figcaption></figure>
+      <figure class="tall"><img src="chat-3.jpeg" alt="Ahad and Nabiha"><figcaption>Anniversary Wish, that will remain in my heart forever</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- HAND IN HAND -->
+  <section class="block">
+    <h2>Hand in hand</h2>
+    <div class="hand-grid">
+      <figure><img src="hand-1.jpeg" alt="Holding hands 1"></figure>
+      <figure><img src="hand-2.jpeg" alt="Holding hands 2"></figure>
+      <figure><img src="hand-3.jpeg" alt="Holding hands 3"></figure>
+      <figure><img src="hand-4.jpeg" alt="Holding hands 4"></figure>
+      <!-- Copy a <figure> line to add more -->
+    </div>
+  </section>
+
+  <!-- EID SLIDER -->
+  <section class="block">
+    <h2>Our Eid</h2>
+    <div class="slider">
+      <div class="track" id="track">
+        <figure><img src="eid-1.jpeg" alt="Eid photo 1"></figure>
+        <figure><img src="eid-2.jpeg" alt="Eid photo 2"></figure>
+        <!-- Copy a <figure> line to add more slides -->
+      </div>
+      <button class="nav prev" id="prev" aria-label="Previous photo">&#8249;</button>
+      <button class="nav next" id="next" aria-label="Next photo">&#8250;</button>
+    </div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <!-- ANNIVERSARIES -->
+  <section class="block">
+    <h2>Our anniversaries</h2>
+    <p>Every 10th of April we have made it one year further, together.</p>
+    <div class="anniv-list">
+      <article class="anniv">
+        <figure><img src="ann-2.jpeg" alt="2nd anniversary"></figure>
+        <div class="anniv-text"><strong>2nd</strong><time>10 April 2023</time><p>We wish for our engagement</p></div>
+      </article>
+      <article class="anniv">
+        <figure><img src="ann-1.jpeg" alt="3rd anniversary"></figure>
+        <div class="anniv-text"><strong>3rd</strong><time>10 April 2024</time><p>We were a lot Happy</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- RISHTA PAKKA HAMPER -->
+  <section class="block hamper">
+    <h2>The day our Relation became Official</h2>
+    <p class="hamper-date">18 April 2025</p>
+    <figure class="hamper-main">
+      <img src="our-rishta-pakka.jpeg" alt="Our rishta pakka hamper">
+      <figcaption>The Day When Our Dream got completed</figcaption>
+    </figure>
+    <!-- <div class="hamper-pair">
+      <figure><img src="hamper-2.jpeg" alt="Rishta pakka hamper detail 1"></figure>
+      <figure><img src="hamper-3.jpeg" alt="Rishta pakka hamper detail 2"></figure>
+    </div> -->
+    <p class="hamper-note">This hamper was not just a gift. It was a promise made in front of both our families that you would be mine and I would be yours.</p>
+    <p class="hamper-note">I kept my promise then, and I am keeping it now. Please don't let one mistake undo the day we said yes to each other.</p>
+  </section>
+
+  <!-- WHY NOT LET GO -->
+  <section class="block">
+    <h2>Before we let this end</h2>
+    <p>Almost every couple who lasts has a moment like this: someone says something wrong, someone gets hurt, and both have to decide whether the hurt is bigger than the years.</p>
+    <p>Ours is not bigger. We have a long history, an engagement, and two families who know us. I don't want to start over with anyone but you.</p>
+
+    <h3>Nobody comes without a past</h3>
+    <p>Everyone carries a past: old mistakes, old habits, old wounds. Nobody is perfect, and I'm not saying I am. A new person would bring their own past, their own flaws and their own problems into your life, and you would have to learn all of it from zero.</p>
+    <p>With me, you already know the person, the family, the flaws and the efforts. That is rare, and it is worth more than the unknown.</p>
+
+    <h3>Walking away is not always the strong choice</h3>
+    <p>Leaving after years because of one mistake in words would be a heavy price for something I have already apologized for. Strong couples are not the ones who never fight. They are the ones who forgive, talk and rebuild.</p>
+    <p>Ask yourself calmly: when you were sick, scared or sad, who stayed? Ahad is not someone who blames and runs. I'm standing here, still fighting for us.</p>
+
+    <h3>What I'm asking</h3>
+    <p>I'm not asking you to forget that you were hurt. I'm asking you to give our ~six years one honest chance to heal, and to judge me by everything I have been to you, not by one sentence.</p>
+  </section>
+
+  <!-- SORRY -->
+  <section class="block sorry">
+    <h2>My special sorry</h2>
+    <p>Nabiha, I am sorry for the words I said and for the pain they caused.</p>
+    <p>I promise to think before I speak, to ask you instead of assuming, and to never say anything that makes you doubt how much I trust you. This will not happen again.</p>
+    <p class="sign">Yours, always,<br>Ahad</p>
+
+
+    <h2 style="margin-top: 20px;">Please, Don't Let Your Ego Win Over Me.</h2>
+  </section>
+
+  <footer>
+    <p>Allah knows my intentions. I'm waiting for your reply.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
