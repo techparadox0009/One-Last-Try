@@ -11,11 +11,15 @@
 </head>
 <body>
 
-  <!-- SOFT MUSIC (put your file next to index.html as music.mp3) -->
-  <audio id="bgm" autoplay loop preload="auto">
-    <source src="love-audio.mpeg" type="audio/mpeg">
-  </audio>
-  <!-- <button class="music" id="music" aria-label="Play or pause music" aria-pressed="false">&#9834;</button> -->
+  <!-- BACKGROUND AUDIO: autoplay, loop, no controls (file must sit next to index.html) -->
+  <audio id="bgm" src="love-audio.mpeg" autoplay loop preload="auto"></audio>
+
+  <!-- ENTRY SCREEN: her tap here is what lets the browser play the audio -->
+  <div class="gate" id="gate">
+    <p class="gate-name">Nabiha,</p>
+    <p class="gate-text">I made this for you. Please keep your sound on.</p>
+    <button class="gate-btn" id="enter">Tap to open</button>
+  </div>
 
   <!-- HERO -->
   <header class="hero">
@@ -166,7 +170,6 @@
     <p>Nabiha, I am sorry for the words I said and for the pain they caused.</p>
     <p>I promise to think before I speak, to ask you instead of assuming, and to never say anything that makes you doubt how much I trust you. This will not happen again.</p>
     <p class="sign">Yours, always,<br>Ahad</p>
-
 
     <h2 style="margin-top: 20px;">Please, Don't Let Your Ego Win Over Me.</h2>
   </section>
