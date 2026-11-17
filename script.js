@@ -28,24 +28,23 @@ const step = () => slides[0].offsetWidth + 12;
 document.getElementById('next').onclick = () => track.scrollBy({left: step(), behavior:'smooth'});
 document.getElementById('prev').onclick = () => track.scrollBy({left: -step(), behavior:'smooth'});
 
-// Soft background music
+// Background audio: loop, no pause control
 const bgm = document.getElementById('bgm');
-const musicBtn = document.getElementById('music');
 bgm.volume = 0.35;
+bgm.loop = true;
+bgm.addEventListener('error', () => console.warn('Audio failed to load. Check the file name and format.'));
 
-function setState(on) { musicBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); }
+const tryPlay = () => bgm.play().catch(() => {});
+tryPlay(); // works on some desktops; phones need the tap below
 
-// Browsers block sound autoplay, so try now and fall back to the first tap.
-bgm.play().then(() => setState(true)).catch(() => {
-  const unlock = () => {
-    bgm.play().then(() => setState(true)).catch(() => {});
-    ['pointerdown', 'touchend', 'click', 'keydown'].forEach(e => document.removeEventListener(e, unlock));
-  };
-  ['pointerdown', 'touchend', 'click', 'keydown'].forEach(e => document.addEventListener(e, unlock));
+// The tap on the entry screen is a real user gesture, so the browser allows sound.
+const gate = document.getElementById('gate');
+document.getElementById('enter').addEventListener('click', () => {
+  tryPlay();
+  gate.classList.add('hide');
+  setTimeout(() => gate.remove(), 700);
 });
 
-musicBtn.onclick = (e) => {
-  e.stopPropagation();
-  if (bgm.paused) { bgm.play().then(() => setState(true)); }
-  else { bgm.pause(); setState(false); }
-};
+// Resume if it gets paused while the page is open.
+bgm.addEventListener('pause', () => { if (!document.hidden) tryPlay(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
